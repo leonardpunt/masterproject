@@ -22,18 +22,19 @@
 <h3>
 <a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstract</h3>
 
-<p>Cascading Style Sheets (CSS) is a language used for defining the presentation semantics of web documents. CSS is widely used. Despite the relatively simple syntax of CSS, CSS code is not easily understood and maintained. The language has a number of complex features, like inheritance, cascading, and specificity. Next to that, established design principles and tool support are missing.</p>
+<p>Cascading Style Sheets (CSS) is a widely used language in today’s web applications for defining the presentation semantics of web documents. Despite the relatively simple syntax of CSS, the language has a number of complex features, like inheritance, cascading, and specificity, which make CSS code challenging to understand and maintain. One of the consequences is that it is not uncommon for CSS code to contain code smells. A code smell is a pattern of code that indicates a weakness in the design. Such a weakness may cause issues in code understanding and maintenance in the long term.</p>
 
-<p>Therefore, one of the consequences is that it is common for CSS code to contain code smells. A code smell is a pattern of code that indicates a weakness in the design. Such a weakness may cause issues in code understanding and maintenance in the long term.</p>
+<p>In this thesis we define a number of code smells for CSS. Furthermore we focus on one code smell, namely <em>undoing style</em>. Our definition of undoing style is: a property that is first set to a value <b>A</b>, next the property is possibly overridden and set to a different value <b>B</b>, possibly multiple times, and subsequently overridden again and set back to the original value <b>A</b>. We refer to this pattern as the <b>A-B*-A</b> pattern.</p>
 
-<p>One of these code smells is undoing style. In this thesis, we propose a technique that detects undoing style in CSS code and recommends refactoring opportunities to eliminate those undoing styles, while preserving the semantics of the web application.
-We evaluate our technique on 41 real-world web applications, and outline a proof of correctness for our refactoring. Our findings show that the amount of undoing style is extensive in CSS code. Additionally, there are quite a few refactorings that can be applied, while introducing barely any errors.</p>
+<p>We propose a technique that detects undoing style in CSS code and recommends refactoring opportunities to eliminate a subset of these instances of undoing style, while preserving the semantics of the web application.</p>
+
+<p>We evaluate our technique on 41 real-world web applications, and outline a proof of correctness for our refactoring. Our findings show that undoing style is quite prominent in CSS code. Additionally, there are many refactorings that can be applied while hardly introducing any errors.</p>
 
 <h3>
 <a id="downloads" class="anchor" href="#downloads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Downloads</h3>
 
 <ul>
-<li><a href="Thesis-Leonard-Punt-20150731.pdf">Thesis</a></li>
+<li><a href="Thesis-Leonard-Punt-20150817.pdf">Thesis</a></li>
 <li><a href="tool.zip">Tool</a></li>
 <li><a href="dataset-and-results.zip">Dataset + results</a></li>
 </ul>
